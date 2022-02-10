@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Kontakty" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IKontakty_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" location="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Kontakty?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="WSHttpBinding_IKontakty" type="i0:IKontakty">
+    <wsp:PolicyReference URI="#WSHttpBinding_IKontakty_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NacistKontakt">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontakt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistKontaktPodleId">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktPodleId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AktualizovatKontakt">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/AktualizovatKontakt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VlozitKontakt">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitKontakt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetVsechKontaktu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetVsechKontaktu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetZmenenychKontaktuTimestampBytes">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetZmenenychKontaktuTimestampHexString">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampHexString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistVsechnyKontakty">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistVsechnyKontakty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistZmeneneKontaktyTimestampBytes">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistZmeneneKontaktyTimestampHexString">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampHexString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistKontaktyPodleSloupce">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktyPodleSloupce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistBankovniSpojeniKontaktu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VlozitBankovniSpojeniKontaktu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ZmenitBankovniSpojeniKontaktu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/ZmenitBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OdstranitBankovniSpojeniKontaktu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/OdstranitBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IKontakty" type="i0:IKontakty">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NacistKontakt">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontakt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistKontaktPodleId">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktPodleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AktualizovatKontakt">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/AktualizovatKontakt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VlozitKontakt">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitKontakt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetVsechKontaktu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetVsechKontaktu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetZmenenychKontaktuTimestampBytes">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetZmenenychKontaktuTimestampHexString">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampHexString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistVsechnyKontakty">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistVsechnyKontakty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistZmeneneKontaktyTimestampBytes">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistZmeneneKontaktyTimestampHexString">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampHexString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistKontaktyPodleSloupce">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktyPodleSloupce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistBankovniSpojeniKontaktu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VlozitBankovniSpojeniKontaktu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ZmenitBankovniSpojeniKontaktu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/ZmenitBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OdstranitBankovniSpojeniKontaktu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/OdstranitBankovniSpojeniKontaktu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Kontakty">
+    <wsdl:port name="WSHttpBinding_IKontakty" binding="tns:WSHttpBinding_IKontakty">
+      <soap12:address location="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Kontakty" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Kontakty</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IKontakty" binding="tns:BasicHttpBinding_IKontakty">
+      <soap:address location="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Kontakty/basic" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

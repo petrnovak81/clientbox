@@ -1,0 +1,214 @@
+﻿html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#left-panel {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    top: 59px;
+    left: 0;
+    width: 0;
+    overflow: auto;
+    background: rgba(204, 204, 204, 0.5);
+    transition: 0.5s;
+}
+
+#left-panel > * {
+        margin: 16px;
+        transition: 0.5s;
+    }
+
+#right-panel {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    top: 59px;
+    right: 0;
+    width: 0;
+    overflow-y: scroll;
+    background: rgba(204, 204, 204, 0.9);
+    transition: 0.5s;
+}
+
+    #right-panel > * {
+        margin: 16px;
+        transition: 0.5s;
+    }
+
+#main {
+    transition: 0.5s;
+    /*padding: 16px;*/
+    padding-top: 59px;
+}
+
+.k-grid th {
+    padding: .75rem;
+    border-width: 0 0 1px 1px;
+    /*white-space:normal;*/
+}
+
+.k-grid td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0;
+    /*padding-left: .75rem;*/
+}
+
+    .k-grid td .k-dropdown {
+    width: 100%;
+    display: normal;
+    }
+
+    .k-grid td .k-dropdown-wrap:not(.action), .k-grid td .btn, .k-grid td .k-button:not(.k-grid-update):not(.k-grid-cancel):not(.action) {
+        width: 100%;
+    }
+
+    .k-grid td .k-dropdown-wrap, .k-grid td .btn, .k-grid td .k-button {
+        border-radius: 0;
+    }
+
+.k-dropdown-wrap .k-input {
+    padding: .25rem .5rem;
+    height: 30px;
+}
+
+.error {
+color: #ff0000;
+}
+
+td .k-dropdown .k-state-disabled {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+ #map {
+        height: calc(100% - 60px); 
+        width: 100%; 
+        position: absolute; 
+        top: 60px; 
+        left: 0px;
+    }
+
+    .marker_label {
+        position: absolute;
+        display: block;
+        white-space: nowrap;
+        color: white;
+        background: rgba(0, 123, 255, .8);
+        border-radius: 3px;
+        padding: 4px;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+    }
+
+        .marker_label .arrow {
+            position: absolute;
+            top: calc(50% - 5px);
+            left: -10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 10px 5px 0;
+            border-color: transparent rgba(0, 123, 255, .8) transparent transparent;
+        }
+
+#chat-dock {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*height: 341px;*/
+    /*background: rgba(124, 124, 124, .3)*/
+}
+
+.chat-win {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 3px;
+    float: right;
+    width: 300px;
+    height: 400px;
+    background: white;
+}
+
+.center-container {
+        position: absolute;
+        z-index:1031;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .center-body {
+        position: relative;
+        margin: 0 auto;
+        width: 50%;
+        top: 50%;
+        transform: perspective(1px) translateY(-50%);
+        color: white;
+    }
+
+    .progress-container {
+        background: rgb(65, 92, 244);
+        border: 1px solid rgb(66, 134, 244);
+        text-align: center;
+    }
+
+    .progress-body {
+        background: rgb(48, 64, 153);
+        text-align: right;
+    }
+
+    .progress-value {
+        margin: 6px;
+    }
+
+.k-list .k-item .k-state-selected .text-muted {
+color: white;
+}
+
+.noheader .k-grid-header {
+    height: 0;
+    border-bottom-width: 0;
+    display: none;
+    overflow: hidden;
+}
+
+/**[data-role="dropdownlist"] {
+display: none;
+}*/
+
+.k-grid-content .k-button {
+    margin: 0;
+}
+
+label.required:after {
+    content: "*";
+    color: red;
+}
+
+.k-grid tbody tr.k-state-selected:hover {
+    color: #212529;
+    background-color: rgba(0,123,255,.25);
+}
+
+.btn.disabled, .btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+}
+
+.k-state-disabled, .k-widget[disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+}
+

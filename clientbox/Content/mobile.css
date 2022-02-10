@@ -1,0 +1,258 @@
+﻿.grid-login {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 0px;
+    grid-template-areas: "." "login_place" ".";
+}
+
+.login_place {
+    grid-area: login_place;
+}
+
+.km-nova .k-scheduler-footer.k-toolbar, .km-nova .k-scheduler-toolbar.k-toolbar {
+    background: #28a745;
+    color: #fff;
+}
+
+.k-pane-wrapper .k-pane .k-scheduler-mobile .k-nav-current {
+    color: #fff;
+}
+
+.form-content {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 6px;
+    color: #1c1e21;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+.km-nova .k-toolbar, .km-nova .km-navbar, .km-nova .km-tabstrip {
+    background-image: linear-gradient(to bottom,#28a745 0,#28a745 100%);
+}
+
+.km-nova .km-primary {
+    color: #fff;
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.km-nova .km-collapsible-header, .km-nova .km-collapsible-header h1, .km-nova .km-collapsible-header h2, .km-nova .km-collapsible-header h3, .km-nova .km-collapsible-header h4, .km-nova .km-collapsible-header h5, .km-nova .km-collapsible-header h6, .km-nova .km-legend-button, .km-nova .km-list > li > .km-listview-link {
+    color: #ff4350;
+}
+
+.km-nova .km-content {
+    color: #32364c;
+    background-color: #eeeef2;
+}
+
+.avatar {
+    width: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.km-thumbnail {
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 2px 2px #808080;
+    font-size: 30px;
+    font-weight: 100;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.contact, .Internet, .Telefon, .Fax, .Email, .pracoviste, .produkt, .polozka,
+.pracak-0, .pracak-10, .pracak-20, .pracak-30, .pracak-40, .pracak-50 {
+    font-family: "Kendo UI";
+    background: #007bff;
+    color: white;
+}
+
+.pracak-0 {
+    background: #6c757d;
+    color: white;
+}
+
+.state-0 {
+    background: #6c757d;
+    color: white;
+}
+
+li .km-thumbnail.pracak-0::after {
+    content: "0";
+}
+
+.pracak-10 {
+    background: #ffc107;
+    color: white;
+}
+
+.state-10 {
+    background: #ffc107;
+    color: white;
+}
+
+li .km-thumbnail.pracak-10::after {
+    content: "10";
+}
+
+.pracak-20 {
+    background: #8abf50;
+    color: white;
+}
+
+.state-20 {
+    background: #8abf50;
+    color: white;
+}
+
+li .km-thumbnail.pracak-20::after {
+    content: "20";
+}
+
+.pracak-30 {
+    background: #28a745;
+    color: white;
+}
+
+.state-30 {
+    background: #28a745;
+    color: white;
+}
+
+li .km-thumbnail.pracak-30::after {
+    content: "30";
+}
+
+.pracak-40 {
+    background: #007bff;
+    color: white;
+}
+
+.state-40 {
+    background: #007bff;
+    color: white;
+}
+
+li .km-thumbnail.pracak-40::after {
+    content: "40";
+}
+
+.pracak-50 {
+    background: #dc3545;
+    color: white;
+}
+
+.state-50 {
+    background: #dc3545;
+    color: white;
+}
+
+li .km-thumbnail.pracak-50::after {
+    content: "50";
+}
+
+.km-thumbnail.contact::after {
+    content: "\e0e4";
+}
+
+.km-thumbnail.p1::after {
+    content: "\e306";
+}
+
+.km-thumbnail.p2::after {
+    content: "\e30f";
+}
+
+.km-thumbnail.p3::after {
+    content: "\e08d";
+}
+
+.km-thumbnail.p4::after {
+    content: "\e307";
+}
+
+.km-thumbnail.p5::after {
+    content: "\e01a";
+}
+
+.km-thumbnail.p6::after {
+    content: "\e01a";
+}
+
+.km-thumbnail.p7::after {
+    content: "\e01a";
+}
+
+.list-subtitle {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.km-nova .km-list > li {
+    font-size: 1.2em;
+    padding-left: .89em;
+    background: #fff;
+    border-radius: 4px;
+    border-width: 0;
+    border-style: solid;
+    line-height: 1.5em;
+    padding: 1.09em .84em 1.23em .84em;
+    margin-left: .7em;
+    margin-right: .7em;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+.km-nova li.km-state-active {
+    background: #f5f6f6;
+}
+
+.k-autocomplete, .k-dropdown-wrap, .k-multiselect-wrap, .k-numeric-wrap, .k-picker-wrap, .k-textarea, .k-textbox {
+    border-width: 0px;
+}
+
+    .k-input[type=text], .k-input[type=number], .k-picker-wrap .k-input, .k-textarea, .k-textarea > .k-input .k-multiselect .k-input, .k-textarea > textarea, .k-textbox, .k-textbox > .k-input, .k-textbox > input {
+        transition: all 0.5s ease;
+        border-width: 0px;
+        border-radius: 0px;
+        border-bottom-width: 2px;
+        border-color: rgba(0, 0, 0, 0.20);
+    }
+
+        .k-autocomplete.k-state-focused, .k-dropdown-wrap.k-state-focused, .k-numeric-wrap.k-state-focused, .k-picker-wrap.k-state-focused, .k-textbox.k-state-focused, .k-textbox:focus {
+            box-shadow: none;
+            border-color: #28a745;
+        }
+
+    .k-datetimepicker .k-select + .k-select, .k-dropdown-wrap .k-select, .k-list-container.k-state-border-right, .k-numeric-wrap .k-select, .k-picker-wrap .k-select {
+        border-radius: 0;
+    }
+
+.k-state-hover > .k-select {
+    border-color: transparent;
+}
+
+.k-state-default > .k-select {
+    border-color: transparent;
+}
+
+.k-autocomplete, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default {
+    background-image: url(textures/highlight.png);
+    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.25) 0,rgba(255,255,255,0) 100%);
+    background-position: 50% 50%;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.k-block, .k-content, .k-dropdown .k-input, .k-popup, .k-toolbar, .k-widget {
+    color: #28a745;
+}

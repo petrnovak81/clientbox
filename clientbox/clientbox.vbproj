@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5E82BEA-25E9-47BA-B479-47E7DCE457EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>clientbox</RootNamespace>
+    <AssemblyName>clientbox</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>clientbox.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>clientbox.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3, Version=1.49.0.2137, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Calendar.v3.1.49.0.2137\lib\net45\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.49.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.3\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.0.0\lib\net451\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=19.2450.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.HtmlToPdfConverter.QtWebKit.AspNet.Mvc5.19.2.0.44\lib\net45\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.HtmlConverter.Base, Version=19.2450.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.HtmlToPdfConverter.QtWebKit.AspNet.Mvc5.19.2.0.44\lib\net45\Syncfusion.HtmlConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=19.2450.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.HtmlToPdfConverter.QtWebKit.AspNet.Mvc5.19.2.0.44\lib\net45\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.6\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.OData, Version=6.1.0.10907, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.OData.6.1.0\lib\net45\System.Web.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.vb" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.vb" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.vb" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.vb" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.vb" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.vb" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.vb" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.vb" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.vb" />
+    <Compile Include="AuthorizationBasic.vb" />
+    <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\AVISServiceController.vb" />
+    <Compile Include="Controllers\MobileController.vb" />
+    <Compile Include="Controllers\SafeBerryController.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ControllerHelper.vb" />
+    <Compile Include="Helpers\HelpersExtensions.vb" />
+    <Compile Include="Models\AddProduktNaskladnit.vb" />
+    <Compile Include="Models\AddOrEditVykazPracePol.vb" />
+    <Compile Include="Models\AGsp_AddNewPracakyPolozkaProduktZablokovat_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_AddNewPracakyPolozkaProduktZablokovat_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_AddOrEditVykazPracePol_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_AddOrEditVykazPracePol_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_FA_MailTextyPolozek_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_FA_PracakyDetailHL_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_FA_PracakyDetailPol_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetDialogObjednavkaTlacitka_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Hlavicka_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Hlavicka_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Hlavicka_Result2.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Hlavicka_Result3.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Hlavicka_Result4.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Hlavicka_Result5.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFA_Polozky_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaAll_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaInventarDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaInventarFoto_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaInventarSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaKontaktyDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaKontaktySeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaObjednavkySeznamDlePracoviste_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaObjednavkySeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaParametry_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaPracovisteDetailKontakty_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaPracovisteDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaPracovisteSeznamHledej_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmaPracovisteSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmyObjednavkaDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetFirmyRecordHistorySeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetHledejFirmaFulltext_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetHledejGlobalFullText_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetInventurniStav_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetMegaPolSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetMojePracaky_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetObjednavkySeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetObjednavkyVse_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetPracakPolozkyNahled_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetProduktDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetProduktJednotliveNaskladneno_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetProduktProcentoProvizeSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetProduktRezervovaneProduktyFirmy_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetProduktSeznamHledaci_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetPuvodPolozkyNaPracaku_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetSBGrafDostupnosti_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetSluzbyPreddefinovane_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetTaskDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetTaskSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetVykazPraceDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetVykazPraceFirmaSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetVykazPraceNedokoncene_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetVykazPracePolDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetVykazPracePolSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_GetVykazPraceSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_BackupProfileSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_BackupServerovaSlozka_G2_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_BackupServerovaSlozka_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_BackupZalohyJednohoProfilu_G2_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_BackupZalohyJednohoProfilu_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DashboardPohledavkyPodrobne_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DashboardPohledavkyPodrobne_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DashboardUcty_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DoctorumBackupConfig_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DoctorumBackupProfile_G2_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DoctorumBackupProfile_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_DokladHLSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_FirmySeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_Historie_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_LokalitaBarvaProGoogleKal_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_MesicniReport_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_NaseWebySeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_PhoneCallListUser_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_PraceNaProjektechGraficky_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_PraceNaProjektuSeznamPoslednichProjektu_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_PraceNaProjektuSeznamVsechProjektu_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_PrijemkaPolSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_PrijemkaPolSeznam_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_SmlouvyServisniDatumDalsihoObdobi_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_SmlouvyServisniGenerovanePausalky_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_SmlouvyServisniProvizeDefSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_SmlouvyServisniSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_SmlouvyServisniSeznam_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_TicketDetail_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_TicketHistorie_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_TicketSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_VykazPraceCerpaneHodinyVMesici_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_VykazPraceSeznamJizdVMesici_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_VyuctovaniSeznam_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Get_VyuctovaniTechnikaPol_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_HledejProduktFullText_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_HledejSluzbaFullText_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Run_Pracak00to10_Result.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGsp_Run_Pracak00to10_Result1.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_BackupFilterProfile.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_DeadLine.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_Dodavatel.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_FakturovatNaFirmu.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_IntervalFakturaceSS.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_ProduktTypZaznamu.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_StavObjednavky.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_StavPracaku.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_TaskStav.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_TypAdresy.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_TypPolozkyPracaku.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_TypServisniSmlouvy.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_TypSSProvize.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvwrr_TypykontaktnichUdaju.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_FA_PracakySeznam.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_FirmyAdresyFakturacni.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_FirmyAPobocky.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_FirmyDodavatele.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_FirmyOdberatele.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_FirmyPobocky.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AGvw_KatalogProduktySProvizi.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AG_tblIBBakovniUcty.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AG_tblRegisterRestrictions.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AG_tblRoles.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AG_tblSignalRUsers.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AG_tblUsers.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AG_tblUsersLastPosition.vb">
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BackUpXml.vb" />
+    <Compile Include="Models\EditVykazPrace.vb" />
+    <Compile Include="Models\AddNewTask.vb" />
+    <Compile Include="Models\AddOrEditFirmyInventar.vb" />
+    <Compile Include="Models\AddOrEditFirmyObjednavka.vb" />
+    <Compile Include="Models\AddEditTask.vb" />
+    <Compile Include="Models\AddOrEditPracoviste.vb" />
+    <Compile Include="Models\AddNewFirma.vb" />
+    <Compile Include="DBRoleProvider.vb" />
+    <Compile Include="Models\ModelCBOX.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCBOX.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCBOX.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCBOX.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCBOX.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCBOX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Result.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\ServiceController.vb" />
+    <Compile Include="AgiloHub.vb" />
+    <Compile Include="Service References\ServiceReference100Mega\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceAgiloDoklady\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceAgiloKontakty\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceDoctorumDoklady\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceDoctorumKontakty\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Download\Backup\latestversion.xml" />
+    <Content Include="App_Data\Faktura.xml" />
+    <Content Include="App_Data\QtBinaries\icudt49.dll" />
+    <Content Include="App_Data\QtBinaries\icuin49.dll" />
+    <Content Include="App_Data\QtBinaries\icuuc49.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qdds.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qgif.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qicns.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qico.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qjp2.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qjpeg.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qmng.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qsvg.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qtga.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qtiff.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qwbmp.dll" />
+    <Content Include="App_Data\QtBinaries\imageformats\qwebp.dll" />
+    <Content Include="App_Data\QtBinaries\libEGL.dll" />
+    <Content Include="App_Data\QtBinaries\libGLESv2.dll" />
+    <Content Include="App_Data\QtBinaries\platforms\qminimal.dll" />
+    <Content Include="App_Data\QtBinaries\platforms\qoffscreen.dll" />
+    <Content Include="App_Data\QtBinaries\platforms\qwindows.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Core.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Gui.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Multimedia.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5MultimediaWidgets.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Network.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5OpenGL.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Positioning.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5PrintSupport.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Qml.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Quick.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Sensors.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Sql.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Svg.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5WebChannel.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5WebKit.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5WebKitWidgets.dll" />
+    <Content Include="App_Data\QtBinaries\Qt5Widgets.dll" />
+    <Content Include="App_Data\QtBinaries\Syncfusion.WebKitWrapper.dll" />
+    <Content Include="App_Data\QtBinaries\zlib1.dll" />
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\mobile.css" />
+    <Content Include="email.html" />
+    <Content Include="emailpovalidaci.html" />
+    <Content Include="emailTicket.html" />
+    <Content Include="App_Data\Faktura.xslt" />
+    <Content Include="Images\crm.png" />
+    <Content Include="Images\crm_512.png" />
+    <Content Include="Areas\HelpPage\Views\_ViewStart.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.vbhtml" />
+    <Content Include="App_Data\app-debug.apk" />
+    <EntityDeploy Include="Models\ModelCBOX.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCBOX.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Images\gback.jpg" />
+    <Content Include="Images\teamviewer.png" />
+    <Content Include="Models\ModelCBOX.edmx.diagram">
+      <DependentUpon>ModelCBOX.edmx</DependentUpon>
+    </Content>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="My Project\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="My Project\PublishProfiles\CBox.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Models\ModelCBOX.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCBOX.edmx</DependentUpon>
+      <LastGenOutput>ModelCBOX.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelCBOX.edmx.sql" />
+    <Content Include="Models\ModelCBOX.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCBOX.edmx</DependentUpon>
+      <LastGenOutput>ModelCBOX.vb</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\kendo.helper.js" />
+    <Content Include="Scripts\kendo.mvvm.helper.js" />
+    <None Include="Service References\ServiceReference100Mega\Default.disco" />
+    <None Include="Service References\ServiceReference100Mega\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference100Mega\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference100Mega\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference100Mega\Default.wsdl" />
+    <Content Include="Scripts\mobile\jquery.speechtotext.min.js" />
+    <Content Include="Scripts\speechtotext.js" />
+    <Content Include="Service References\ServiceReferenceAgiloDoklady\clientbox.ServiceReferenceAgiloDoklady.DokladContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceAgiloDoklady\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceAgiloDoklady\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceAgiloDoklady\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceReferenceAgiloKontakty\clientbox.ServiceReferenceAgiloKontakty.BankovniSpojeniContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReferenceAgiloKontakty\clientbox.ServiceReferenceAgiloKontakty.KontaktContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceAgiloKontakty\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceAgiloKontakty\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceAgiloKontakty\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceReferenceDoctorumDoklady\clientbox.ServiceReferenceDoctorumDoklady.DokladContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceAgiloDoklady\Altus.wsdl" />
+    <None Include="Service References\ServiceReferenceAgiloDoklady\Altus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAgiloDoklady\Altus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAgiloDoklady\Altus2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAgiloDoklady\Doklady.wsdl" />
+    <None Include="Service References\ServiceReferenceAgiloKontakty\Altus.wsdl" />
+    <None Include="Service References\ServiceReferenceAgiloKontakty\Altus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAgiloKontakty\Altus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAgiloKontakty\Kontakty.wsdl" />
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceReferenceDoctorumKontakty\clientbox.ServiceReferenceDoctorumKontakty.BankovniSpojeniContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReferenceDoctorumKontakty\clientbox.ServiceReferenceDoctorumKontakty.KontaktContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Sounds\chat.mp3" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Home\Mapa.vbhtml" />
+    <Content Include="Views\Home\Uzivatele.vbhtml" />
+    <Content Include="Views\Account\Login.vbhtml" />
+    <Content Include="Views\Home\Sklad.vbhtml" />
+    <Content Include="Views\Home\Klienti.vbhtml" />
+    <Content Include="Views\Home\Fakturace.vbhtml" />
+    <Content Include="Views\Home\DetailVolani.vbhtml" />
+    <Content Include="Views\Home\Objednavky.vbhtml" />
+    <Content Include="Views\Account\GetUser.vbhtml" />
+    <Content Include="Views\Account\ResetPassword.vbhtml" />
+    <Content Include="Views\Home\Ciselniky.vbhtml" />
+    <Content Include="Views\Home\StoMega.vbhtml" />
+    <Content Include="Views\Home\InventurniStav.vbhtml" />
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\Altus.wsdl" />
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\Altus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\Altus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\Altus2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceDoctorumDoklady\Doklady.wsdl" />
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\Altus.wsdl" />
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\Altus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\Altus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceDoctorumKontakty\Kontakty.wsdl" />
+    <Content Include="Views\Home\WindowTask.vbhtml" />
+    <Content Include="Views\Home\ServiskySeznam.vbhtml" />
+    <Content Include="Views\Home\MojeServisky.vbhtml" />
+    <Content Include="Views\Home\FakturaceServisek.vbhtml" />
+    <Content Include="Views\Home\MojeOdmeny.vbhtml" />
+    <Content Include="Views\Home\Kalendar.vbhtml" />
+    <Content Include="Views\Home\Tikety.vbhtml" />
+    <Content Include="Views\Home\Weby.vbhtml" />
+    <Content Include="Views\Mobile\Index.vbhtml" />
+    <Content Include="Views\Home\Prijemky.vbhtml" />
+    <Content Include="Views\Mobile\Login.vbhtml" />
+    <Content Include="Views\Home\Pohyby.vbhtml" />
+    <Content Include="Views\Home\Zalohy.vbhtml" />
+    <Content Include="Views\Home\GrafDostupnosti.vbhtml" />
+    <Content Include="Views\Home\Adresar.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.signalR-2.2.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.3.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\app.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Download\Backup\2021.3.1.0\" />
+    <Folder Include="Files\" />
+    <Folder Include="fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference100Mega\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceAgiloDoklady\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceAgiloKontakty\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceDoctorumDoklady\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceDoctorumKontakty\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4200</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4200/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

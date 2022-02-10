@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="611a8a3b2ca9443081a58825ba1dd20a" Name="Diagram1">
+        <EntityTypeShape EntityType="Data4995Model.AG_tblRoles" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Data4995Model.AG_tblSignalRUsers" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_FirmyAdresyFakturacni" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_FirmyAPobocky" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_FirmyDodavatele" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_FirmyOdberatele" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_FirmyPobocky" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_KatalogProduktySProvizi" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_DeadLine" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_Dodavatel" Width="1.5" PointX="5.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_FakturovatNaFirmu" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_ProduktTypZaznamu" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_StavObjednavky" Width="1.5" PointX="9.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_StavPracaku" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_TaskStav" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_TypAdresy" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_TypPolozkyPracaku" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_TypServisniSmlouvy" Width="1.5" PointX="11.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_TypykontaktnichUdaju" Width="1.5" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Data4995Model.AG_tblRegisterRestrictions" Width="1.5" PointX="5.375" PointY="12.75" />
+        <EntityTypeShape EntityType="Data4995Model.AG_tblUsersLastPosition" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvw_FA_PracakySeznam" Width="1.5" PointX="7.375" PointY="12.75" />
+        <EntityTypeShape EntityType="Data4995Model.AG_tblUsers" Width="1.5" PointX="9.375" PointY="12.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_TypSSProvize" Width="1.5" PointX="12.375" PointY="11.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_IntervalFakturaceSS" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Data4995Model.AG_tblIBBakovniUcty" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Data4995Model.AGvwrr_BackupFilterProfile" Width="1.5" PointX="14.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/Imports">
+      <xsd:import schemaLocation="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?xsd=xsd0" namespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" />
+      <xsd:import schemaLocation="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDoklady_VlozitNovyDoklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:VlozitNovyDoklad" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_VlozitNovyDoklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VlozitNovyDokladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_VlozitNovyDoklad_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDoklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDoklad" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDoklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDoklad_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladRG_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladRG" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladRG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladRGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladRG_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladRGPolozka_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladRGPolozka" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladRGPolozka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladRGPolozkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladRGPolozka_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_AktualizovatDoklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:AktualizovatDoklad" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_AktualizovatDoklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AktualizovatDokladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_AktualizovatDoklad_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_DodatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:DodatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_DodatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DodatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_DodatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ObjednatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObjednatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ObjednatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObjednatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ObjednatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_PotvrditPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:PotvrditPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_PotvrditPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PotvrditPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_PotvrditPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_RezervovatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RezervovatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_RezervovatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RezervovatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_RezervovatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_OdrezervovatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:OdrezervovatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_OdrezervovatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OdrezervovatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_OdrezervovatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_VydatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:VydatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_VydatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VydatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_VydatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_FakturovatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:FakturovatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_FakturovatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FakturovatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_FakturovatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornovatPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornovatPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_PrijmoutPolozkuDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrijmoutPolozkuDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_PrijmoutPolozkuDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrijmoutPolozkuDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_PrijmoutPolozkuDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ZaokrouhlitCastku_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZaokrouhlitCastku" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ZaokrouhlitCastku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZaokrouhlitCastkuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ZaokrouhlitCastku_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladyPodleSloupce_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladyPodleSloupce" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladyPodleSloupce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladyPodleSloupceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDokladyPodleSloupce_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistCislaDokladuPodleSloupce_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistCislaDokladuPodleSloupce" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistCislaDokladuPodleSloupce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistCislaDokladuPodleSloupceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistCislaDokladuPodleSloupce_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitKonceptPolozkyDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:NastavitKonceptPolozkyDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitKonceptPolozkyDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NastavitKonceptPolozkyDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitKonceptPolozkyDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_UplatnitZalohy_InputMessage">
+    <wsdl:part name="parameters" element="tns:UplatnitZalohy" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_UplatnitZalohy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UplatnitZalohyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_UplatnitZalohy_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_UplatnitZalohyRG_InputMessage">
+    <wsdl:part name="parameters" element="tns:UplatnitZalohyRG" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_UplatnitZalohyRG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UplatnitZalohyRGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_UplatnitZalohyRG_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitZamekDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:NastavitZamekDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitZamekDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NastavitZamekDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitZamekDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitZamekDokladuRG_InputMessage">
+    <wsdl:part name="parameters" element="tns:NastavitZamekDokladuRG" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitZamekDokladuRG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NastavitZamekDokladuRGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NastavitZamekDokladuRG_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDoklady_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDoklady" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDoklady_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistDokladyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistDoklady_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistCislaDokladu_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistCislaDokladu" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistCislaDokladu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistCislaDokladuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_NacistCislaDokladu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatDoklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornovatDoklad" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatDoklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornovatDokladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatDoklad_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatDokladRG_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornovatDokladRG" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatDokladRG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornovatDokladRGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_StornovatDokladRG_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ParovatZZaZV_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParovatZZaZV" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ParovatZZaZV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParovatZZaZVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoklady_ParovatZZaZV_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:portType name="IDoklady">
+    <wsdl:operation name="VlozitNovyDoklad">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VlozitNovyDoklad" message="tns:IDoklady_VlozitNovyDoklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VlozitNovyDokladResponse" message="tns:IDoklady_VlozitNovyDoklad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VlozitNovyDokladExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_VlozitNovyDoklad_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistDoklad">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDoklad" message="tns:IDoklady_NacistDoklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladResponse" message="tns:IDoklady_NacistDoklad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistDoklad_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladRG">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRG" message="tns:IDoklady_NacistDokladRG_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGResponse" message="tns:IDoklady_NacistDokladRG_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistDokladRG_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladRGPolozka">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGPolozka" message="tns:IDoklady_NacistDokladRGPolozka_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGPolozkaResponse" message="tns:IDoklady_NacistDokladRGPolozka_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGPolozkaExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistDokladRGPolozka_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AktualizovatDoklad">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/AktualizovatDoklad" message="tns:IDoklady_AktualizovatDoklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/AktualizovatDokladResponse" message="tns:IDoklady_AktualizovatDoklad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/AktualizovatDokladExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_AktualizovatDoklad_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DodatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/DodatPolozkuDokladu" message="tns:IDoklady_DodatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/DodatPolozkuDokladuResponse" message="tns:IDoklady_DodatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/DodatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_DodatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObjednatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ObjednatPolozkuDokladu" message="tns:IDoklady_ObjednatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ObjednatPolozkuDokladuResponse" message="tns:IDoklady_ObjednatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ObjednatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_ObjednatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PotvrditPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PotvrditPolozkuDokladu" message="tns:IDoklady_PotvrditPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PotvrditPolozkuDokladuResponse" message="tns:IDoklady_PotvrditPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PotvrditPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_PotvrditPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RezervovatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/RezervovatPolozkuDokladu" message="tns:IDoklady_RezervovatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/RezervovatPolozkuDokladuResponse" message="tns:IDoklady_RezervovatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/RezervovatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_RezervovatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OdrezervovatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/OdrezervovatPolozkuDokladu" message="tns:IDoklady_OdrezervovatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/OdrezervovatPolozkuDokladuResponse" message="tns:IDoklady_OdrezervovatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/OdrezervovatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_OdrezervovatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VydatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VydatPolozkuDokladu" message="tns:IDoklady_VydatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VydatPolozkuDokladuResponse" message="tns:IDoklady_VydatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VydatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_VydatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FakturovatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/FakturovatPolozkuDokladu" message="tns:IDoklady_FakturovatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/FakturovatPolozkuDokladuResponse" message="tns:IDoklady_FakturovatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/FakturovatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_FakturovatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornovatPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatPolozkuDokladu" message="tns:IDoklady_StornovatPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatPolozkuDokladuResponse" message="tns:IDoklady_StornovatPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_StornovatPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrijmoutPolozkuDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PrijmoutPolozkuDokladu" message="tns:IDoklady_PrijmoutPolozkuDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PrijmoutPolozkuDokladuResponse" message="tns:IDoklady_PrijmoutPolozkuDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PrijmoutPolozkuDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_PrijmoutPolozkuDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZaokrouhlitCastku">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ZaokrouhlitCastku" message="tns:IDoklady_ZaokrouhlitCastku_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ZaokrouhlitCastkuResponse" message="tns:IDoklady_ZaokrouhlitCastku_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ZaokrouhlitCastkuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_ZaokrouhlitCastku_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladyPodleSloupce">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyPodleSloupce" message="tns:IDoklady_NacistDokladyPodleSloupce_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyPodleSloupceResponse" message="tns:IDoklady_NacistDokladyPodleSloupce_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyPodleSloupceExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistDokladyPodleSloupce_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistCislaDokladuPodleSloupce">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuPodleSloupce" message="tns:IDoklady_NacistCislaDokladuPodleSloupce_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuPodleSloupceResponse" message="tns:IDoklady_NacistCislaDokladuPodleSloupce_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuPodleSloupceExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistCislaDokladuPodleSloupce_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NastavitKonceptPolozkyDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitKonceptPolozkyDokladu" message="tns:IDoklady_NastavitKonceptPolozkyDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitKonceptPolozkyDokladuResponse" message="tns:IDoklady_NastavitKonceptPolozkyDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitKonceptPolozkyDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NastavitKonceptPolozkyDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UplatnitZalohy">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohy" message="tns:IDoklady_UplatnitZalohy_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyResponse" message="tns:IDoklady_UplatnitZalohy_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_UplatnitZalohy_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UplatnitZalohyRG">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyRG" message="tns:IDoklady_UplatnitZalohyRG_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyRGResponse" message="tns:IDoklady_UplatnitZalohyRG_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyRGExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_UplatnitZalohyRG_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NastavitZamekDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladu" message="tns:IDoklady_NastavitZamekDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuResponse" message="tns:IDoklady_NastavitZamekDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NastavitZamekDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NastavitZamekDokladuRG">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuRG" message="tns:IDoklady_NastavitZamekDokladuRG_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuRGResponse" message="tns:IDoklady_NastavitZamekDokladuRG_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuRGExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NastavitZamekDokladuRG_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistDoklady">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDoklady" message="tns:IDoklady_NacistDoklady_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyResponse" message="tns:IDoklady_NacistDoklady_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistDoklady_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistCislaDokladu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladu" message="tns:IDoklady_NacistCislaDokladu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuResponse" message="tns:IDoklady_NacistCislaDokladu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_NacistCislaDokladu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornovatDoklad">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDoklad" message="tns:IDoklady_StornovatDoklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladResponse" message="tns:IDoklady_StornovatDoklad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_StornovatDoklad_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornovatDokladRG">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladRG" message="tns:IDoklady_StornovatDokladRG_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladRGResponse" message="tns:IDoklady_StornovatDokladRG_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladRGExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_StornovatDokladRG_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParovatZZaZV">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ParovatZZaZV" message="tns:IDoklady_ParovatZZaZV_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ParovatZZaZVResponse" message="tns:IDoklady_ParovatZZaZV_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ParovatZZaZVExceptionContractFault" name="ExceptionContractFault" message="tns:IDoklady_ParovatZZaZV_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

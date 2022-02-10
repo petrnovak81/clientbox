@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="VlozitNovyDoklad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="doklad" nillable="true" type="q1:DokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DokladContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CelkemBezDPH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CelkemVcetneDPH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cenik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisloDokladu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisloUctu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Datum" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DatumDokonceni" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DatumZdanitelnehoPlneni" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DodatNajednou" type="xs:boolean" />
+      <xs:element xmlns:q2="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="DorucovaciAdresa" nillable="true" type="q2:AdresaContract" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="ExtendedProperties" nillable="true" type="q3:ArrayOfExtendedPropertyContract" />
+      <xs:element xmlns:q4="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="FakturacniAdresa" nillable="true" type="q4:AdresaContract" />
+      <xs:element minOccurs="0" name="Firma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaRG" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ICO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jmeno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KategorieCen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kniha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KodBanky" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Komentar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KonstantniSymbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KurzMeny" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mena" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MistoPlneni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MnozstviMeny" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NazevBanky" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NazevFirmy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NazevZaznamu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PocitatDphShora" type="xs:boolean" />
+      <xs:element xmlns:q5="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="Polozky" nillable="true" type="q5:ArrayOfDokladPolozkaContract" />
+      <xs:element minOccurs="0" name="PozadovanaZaloha" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Poznamka" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rok" type="xs:short" />
+      <xs:element minOccurs="0" name="Sablona" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="Souvislosti" nillable="true" type="q6:ArrayOfDokladSouvislostContract" />
+      <xs:element minOccurs="0" name="SpecifickySymbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SplatnostDni" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="StavDokladu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrediskoDokladu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypZaznamu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Udaj1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Udaj2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UhrazenaZaloha" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VariabilniSymbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zaokrouhleni" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZaokrouhlovatSoucet" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZbyvaUhradit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZpusobDopravy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZpusobUhrady" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q7="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="DokladContract" nillable="true" type="q7:DokladContract" />
+  <xs:complexType name="AdresaContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ISOZeme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Obec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Okres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PSC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ulice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q8="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="AdresaContract" nillable="true" type="q8:AdresaContract" />
+  <xs:complexType name="ArrayOfExtendedPropertyContract">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="ExtendedPropertyContract" nillable="true" type="q9:ExtendedPropertyContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q10="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfExtendedPropertyContract" nillable="true" type="q10:ArrayOfExtendedPropertyContract" />
+  <xs:complexType name="ExtendedPropertyContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DBType" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q11="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ExtendedPropertyContract" nillable="true" type="q11:ExtendedPropertyContract" />
+  <xs:complexType name="ArrayOfDokladPolozkaContract">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="DokladPolozkaContract" nillable="true" type="q12:DokladPolozkaContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q13="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfDokladPolozkaContract" nillable="true" type="q13:ArrayOfDokladPolozkaContract" />
+  <xs:complexType name="DokladPolozkaContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CelkemDPH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CenaCelkemBezDPH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CenaCelkemVcetneDPH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CenaZakladniCelkem" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CenaZakladniObsahujeDPH" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CilovySklad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatumPlneni" type="xs:dateTime" />
+      <xs:element xmlns:q14="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="ExtendedProperties" nillable="true" type="q14:ArrayOfExtendedPropertyContract" />
+      <xs:element minOccurs="0" name="Jednotky" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MnozstviJednotek" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NazevSazbyDPH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Popis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poradi" type="xs:int" />
+      <xs:element minOccurs="0" name="Poznamka" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Produkt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProduktRG" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SazbaDPH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Sklad" nillable="true" type="xs:string" />
+      <xs:element xmlns:q15="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="Skupiny" nillable="true" type="q15:ArrayOfDokladPolozkaSkupinyContract" />
+      <xs:element minOccurs="0" name="SouvisejiciPolozka" nillable="true" type="ser:guid" />
+      <xs:element xmlns:q16="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="Souvislosti" nillable="true" type="q16:ArrayOfDokladPolozkaSouvislostContract" />
+      <xs:element minOccurs="0" name="Stav" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariabilniSymbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Varianta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zakazka" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZdanitelnePlneni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q17="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="DokladPolozkaContract" nillable="true" type="q17:DokladPolozkaContract" />
+  <xs:complexType name="ArrayOfDokladPolozkaSkupinyContract">
+    <xs:sequence>
+      <xs:element xmlns:q18="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="DokladPolozkaSkupinyContract" nillable="true" type="q18:DokladPolozkaSkupinyContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q19="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfDokladPolozkaSkupinyContract" nillable="true" type="q19:ArrayOfDokladPolozkaSkupinyContract" />
+  <xs:complexType name="DokladPolozkaSkupinyContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JednotkaBaleni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mnozstvi" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Sarze" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerioveCislo" nillable="true" type="xs:string" />
+      <xs:element xmlns:q20="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="Souvislosti" nillable="true" type="q20:ArrayOfDokladPolozkaSkupinySouvislostContract" />
+      <xs:element minOccurs="0" name="Stav" type="xs:int" />
+      <xs:element minOccurs="0" name="Trvanlivost" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Umisteni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q21="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="DokladPolozkaSkupinyContract" nillable="true" type="q21:DokladPolozkaSkupinyContract" />
+  <xs:complexType name="ArrayOfDokladPolozkaSkupinySouvislostContract">
+    <xs:sequence>
+      <xs:element xmlns:q22="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="DokladPolozkaSkupinySouvislostContract" nillable="true" type="q22:DokladPolozkaSkupinySouvislostContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q23="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfDokladPolozkaSkupinySouvislostContract" nillable="true" type="q23:ArrayOfDokladPolozkaSkupinySouvislostContract" />
+  <xs:complexType name="DokladPolozkaSkupinySouvislostContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Polozka" type="ser:guid" />
+      <xs:element minOccurs="0" name="Souvislost" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q24="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="DokladPolozkaSkupinySouvislostContract" nillable="true" type="q24:DokladPolozkaSkupinySouvislostContract" />
+  <xs:complexType name="ArrayOfDokladPolozkaSouvislostContract">
+    <xs:sequence>
+      <xs:element xmlns:q25="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="DokladPolozkaSouvislostContract" nillable="true" type="q25:DokladPolozkaSouvislostContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q26="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfDokladPolozkaSouvislostContract" nillable="true" type="q26:ArrayOfDokladPolozkaSouvislostContract" />
+  <xs:complexType name="DokladPolozkaSouvislostContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JeSouvisejiciPolozka" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Polozka" type="ser:guid" />
+      <xs:element minOccurs="0" name="Souvislost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q27="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="DokladPolozkaSouvislostContract" nillable="true" type="q27:DokladPolozkaSouvislostContract" />
+  <xs:complexType name="ArrayOfDokladSouvislostContract">
+    <xs:sequence>
+      <xs:element xmlns:q28="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="DokladSouvislostContract" nillable="true" type="q28:DokladSouvislostContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q29="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfDokladSouvislostContract" nillable="true" type="q29:ArrayOfDokladSouvislostContract" />
+  <xs:complexType name="DokladSouvislostContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CastkaPlatby" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Datum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Doklad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JeSouvisejiciDoklad" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Souvislost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q30="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="DokladSouvislostContract" nillable="true" type="q30:DokladSouvislostContract" />
+  <xs:element name="VlozitNovyDokladResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VlozitNovyDokladResult" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ExceptionContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q31="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="InnerException" nillable="true" type="q31:ExceptionContract" />
+      <xs:element minOccurs="0" name="IsApplicationException" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTerminalFault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q32="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ExceptionContract" nillable="true" type="q32:ExceptionContract" />
+  <xs:element name="NacistDoklad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cisloDokladu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="NacistDokladResult" nillable="true" type="q33:DokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladRG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladRGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="NacistDokladRGResult" nillable="true" type="q34:DokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladRGPolozka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladRGPolozkaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="NacistDokladRGPolozkaResult" nillable="true" type="q35:DokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AktualizovatDoklad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="doklad" nillable="true" type="q36:DokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AktualizovatDokladResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DodatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DodatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjednatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjednatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PotvrditPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PotvrditPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RezervovatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RezervovatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OdrezervovatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OdrezervovatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VydatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VydatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FakturovatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FakturovatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornovatPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornovatPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrijmoutPolozkuDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrijmoutPolozkuDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZaokrouhlitCastku">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="castka" type="xs:decimal" />
+        <xs:element minOccurs="0" name="presnost" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZaokrouhlitCastkuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ZaokrouhlitCastkuResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladyPodleSloupce">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sloupec" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hodnota" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nazevDokladu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDokladyPodleSloupceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="NacistDokladyPodleSloupceResult" nillable="true" type="q37:ArrayOfDokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDokladContract">
+    <xs:sequence>
+      <xs:element xmlns:q38="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="DokladContract" nillable="true" type="q38:DokladContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q39="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfDokladContract" nillable="true" type="q39:ArrayOfDokladContract" />
+  <xs:element name="NacistCislaDokladuPodleSloupce">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sloupec" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hodnota" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nazevDokladu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistCislaDokladuPodleSloupceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NacistCislaDokladuPodleSloupceResult" nillable="true" type="q40:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NastavitKonceptPolozkyDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="polozkaId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NastavitKonceptPolozkyDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UplatnitZalohy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cisloDokladu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UplatnitZalohyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UplatnitZalohyRG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rowguid" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UplatnitZalohyRGResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NastavitZamekDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uzamknout" type="xs:boolean" />
+        <xs:element xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="cislaDokladu" nillable="true" type="q41:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NastavitZamekDokladuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NastavitZamekDokladuRG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uzamknout" type="xs:boolean" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rowguidDokladu" nillable="true" type="q42:ArrayOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NastavitZamekDokladuRGResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistDoklady">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="kriteria" nillable="true" type="q43:ArrayOfKriteriumContract" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfKriteriumContract">
+    <xs:sequence>
+      <xs:element xmlns:q44="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" maxOccurs="unbounded" name="KriteriumContract" nillable="true" type="q44:KriteriumContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q45="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ArrayOfKriteriumContract" nillable="true" type="q45:ArrayOfKriteriumContract" />
+  <xs:complexType name="KriteriumContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q46="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="Operator" type="q46:ExpressionOperator" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q47="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="KriteriumContract" nillable="true" type="q47:KriteriumContract" />
+  <xs:simpleType name="ExpressionOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotEqual" />
+      <xs:enumeration value="Equal" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="LessThen" />
+      <xs:enumeration value="GreaterThanOrEqual" />
+      <xs:enumeration value="LessThenOrEqual" />
+      <xs:enumeration value="StartsWith" />
+      <xs:enumeration value="EndsWith" />
+      <xs:enumeration value="Contains" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q48="http://www.altus.cz/Altus.COM.V12.BasicContracts/" name="ExpressionOperator" nillable="true" type="q48:ExpressionOperator" />
+  <xs:element name="NacistDokladyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="NacistDokladyResult" nillable="true" type="q49:ArrayOfDokladContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistCislaDokladu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://www.altus.cz/Altus.COM.V12.BasicContracts/" minOccurs="0" name="kriteria" nillable="true" type="q50:ArrayOfKriteriumContract" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NacistCislaDokladuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NacistCislaDokladuResult" nillable="true" type="q51:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornovatDoklad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cisloDokladu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornovatDokladResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornovatDokladRG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rowguidDokladu" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornovatDokladRGResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParovatZZaZV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zakazka" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zaloha" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParovatZZaZVResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://i6ws.100mega.cz/Default.asmx?wsdl" docRef="https://i6ws.100mega.cz/Default.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://i6ws.100mega.cz/Default.asmx" xmlns:q1="http://www.cybersoft.cz/I6/Web/WebService/" binding="q1:I6_x005F_x0020_Web_x005F_x0020_ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/Imports">
+      <xsd:import schemaLocation="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Kontakty?xsd=xsd0" namespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" />
+      <xsd:import schemaLocation="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Kontakty?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKontakty_NacistKontakt_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistKontakt" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontakt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistKontaktResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontakt_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontaktPodleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistKontaktPodleId" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontaktPodleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistKontaktPodleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontaktPodleId_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_AktualizovatKontakt_InputMessage">
+    <wsdl:part name="parameters" element="tns:AktualizovatKontakt" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_AktualizovatKontakt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AktualizovatKontaktResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_AktualizovatKontakt_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_VlozitKontakt_InputMessage">
+    <wsdl:part name="parameters" element="tns:VlozitKontakt" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_VlozitKontakt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VlozitKontaktResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_VlozitKontakt_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetVsechKontaktu_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistPocetVsechKontaktu" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetVsechKontaktu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistPocetVsechKontaktuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetVsechKontaktu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetZmenenychKontaktuTimestampBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistPocetZmenenychKontaktuTimestampBytes" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetZmenenychKontaktuTimestampBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistPocetZmenenychKontaktuTimestampBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetZmenenychKontaktuTimestampBytes_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetZmenenychKontaktuTimestampHexString_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistPocetZmenenychKontaktuTimestampHexString" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetZmenenychKontaktuTimestampHexString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistPocetZmenenychKontaktuTimestampHexStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistPocetZmenenychKontaktuTimestampHexString_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistVsechnyKontakty_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistVsechnyKontakty" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistVsechnyKontakty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistVsechnyKontaktyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistVsechnyKontakty_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistZmeneneKontaktyTimestampBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistZmeneneKontaktyTimestampBytes" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistZmeneneKontaktyTimestampBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistZmeneneKontaktyTimestampBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistZmeneneKontaktyTimestampBytes_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistZmeneneKontaktyTimestampHexString_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistZmeneneKontaktyTimestampHexString" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistZmeneneKontaktyTimestampHexString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistZmeneneKontaktyTimestampHexStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistZmeneneKontaktyTimestampHexString_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontaktyPodleSloupce_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistKontaktyPodleSloupce" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontaktyPodleSloupce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistKontaktyPodleSloupceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistKontaktyPodleSloupce_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistBankovniSpojeniKontaktu_InputMessage">
+    <wsdl:part name="parameters" element="tns:NacistBankovniSpojeniKontaktu" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistBankovniSpojeniKontaktu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NacistBankovniSpojeniKontaktuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_NacistBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_VlozitBankovniSpojeniKontaktu_InputMessage">
+    <wsdl:part name="parameters" element="tns:VlozitBankovniSpojeniKontaktu" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_VlozitBankovniSpojeniKontaktu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VlozitBankovniSpojeniKontaktuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_VlozitBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_ZmenitBankovniSpojeniKontaktu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZmenitBankovniSpojeniKontaktu" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_ZmenitBankovniSpojeniKontaktu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZmenitBankovniSpojeniKontaktuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_ZmenitBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_OdstranitBankovniSpojeniKontaktu_InputMessage">
+    <wsdl:part name="parameters" element="tns:OdstranitBankovniSpojeniKontaktu" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_OdstranitBankovniSpojeniKontaktu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OdstranitBankovniSpojeniKontaktuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKontakty_OdstranitBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:ExceptionContract" />
+  </wsdl:message>
+  <wsdl:portType name="IKontakty">
+    <wsdl:operation name="NacistKontakt">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontakt" message="tns:IKontakty_NacistKontakt_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktResponse" message="tns:IKontakty_NacistKontakt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistKontakt_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistKontaktPodleId">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktPodleId" message="tns:IKontakty_NacistKontaktPodleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktPodleIdResponse" message="tns:IKontakty_NacistKontaktPodleId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktPodleIdExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistKontaktPodleId_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AktualizovatKontakt">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/AktualizovatKontakt" message="tns:IKontakty_AktualizovatKontakt_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/AktualizovatKontaktResponse" message="tns:IKontakty_AktualizovatKontakt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/AktualizovatKontaktExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_AktualizovatKontakt_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VlozitKontakt">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitKontakt" message="tns:IKontakty_VlozitKontakt_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitKontaktResponse" message="tns:IKontakty_VlozitKontakt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitKontaktExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_VlozitKontakt_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetVsechKontaktu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetVsechKontaktu" message="tns:IKontakty_NacistPocetVsechKontaktu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetVsechKontaktuResponse" message="tns:IKontakty_NacistPocetVsechKontaktu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetVsechKontaktuExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistPocetVsechKontaktu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetZmenenychKontaktuTimestampBytes">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampBytes" message="tns:IKontakty_NacistPocetZmenenychKontaktuTimestampBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampBytesResponse" message="tns:IKontakty_NacistPocetZmenenychKontaktuTimestampBytes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampBytesExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistPocetZmenenychKontaktuTimestampBytes_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistPocetZmenenychKontaktuTimestampHexString">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampHexString" message="tns:IKontakty_NacistPocetZmenenychKontaktuTimestampHexString_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampHexStringResponse" message="tns:IKontakty_NacistPocetZmenenychKontaktuTimestampHexString_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistPocetZmenenychKontaktuTimestampHexStringExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistPocetZmenenychKontaktuTimestampHexString_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistVsechnyKontakty">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistVsechnyKontakty" message="tns:IKontakty_NacistVsechnyKontakty_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistVsechnyKontaktyResponse" message="tns:IKontakty_NacistVsechnyKontakty_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistVsechnyKontaktyExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistVsechnyKontakty_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistZmeneneKontaktyTimestampBytes">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampBytes" message="tns:IKontakty_NacistZmeneneKontaktyTimestampBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampBytesResponse" message="tns:IKontakty_NacistZmeneneKontaktyTimestampBytes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampBytesExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistZmeneneKontaktyTimestampBytes_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistZmeneneKontaktyTimestampHexString">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampHexString" message="tns:IKontakty_NacistZmeneneKontaktyTimestampHexString_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampHexStringResponse" message="tns:IKontakty_NacistZmeneneKontaktyTimestampHexString_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistZmeneneKontaktyTimestampHexStringExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistZmeneneKontaktyTimestampHexString_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistKontaktyPodleSloupce">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktyPodleSloupce" message="tns:IKontakty_NacistKontaktyPodleSloupce_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktyPodleSloupceResponse" message="tns:IKontakty_NacistKontaktyPodleSloupce_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistKontaktyPodleSloupceExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistKontaktyPodleSloupce_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NacistBankovniSpojeniKontaktu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistBankovniSpojeniKontaktu" message="tns:IKontakty_NacistBankovniSpojeniKontaktu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistBankovniSpojeniKontaktuResponse" message="tns:IKontakty_NacistBankovniSpojeniKontaktu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/NacistBankovniSpojeniKontaktuExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_NacistBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VlozitBankovniSpojeniKontaktu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitBankovniSpojeniKontaktu" message="tns:IKontakty_VlozitBankovniSpojeniKontaktu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitBankovniSpojeniKontaktuResponse" message="tns:IKontakty_VlozitBankovniSpojeniKontaktu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/VlozitBankovniSpojeniKontaktuExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_VlozitBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZmenitBankovniSpojeniKontaktu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/ZmenitBankovniSpojeniKontaktu" message="tns:IKontakty_ZmenitBankovniSpojeniKontaktu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/ZmenitBankovniSpojeniKontaktuResponse" message="tns:IKontakty_ZmenitBankovniSpojeniKontaktu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/ZmenitBankovniSpojeniKontaktuExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_ZmenitBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OdstranitBankovniSpojeniKontaktu">
+      <wsdl:input wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/OdstranitBankovniSpojeniKontaktu" message="tns:IKontakty_OdstranitBankovniSpojeniKontaktu_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/OdstranitBankovniSpojeniKontaktuResponse" message="tns:IKontakty_OdstranitBankovniSpojeniKontaktu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.altus.cz/Altus.COM.V12.BasicContracts/IKontakty/OdstranitBankovniSpojeniKontaktuExceptionContractFault" name="ExceptionContractFault" message="tns:IKontakty_OdstranitBankovniSpojeniKontaktu_ExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

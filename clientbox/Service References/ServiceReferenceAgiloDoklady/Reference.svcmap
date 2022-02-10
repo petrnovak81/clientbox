@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9536dcf2-c901-4854-a42b-129949e8b63d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Doklady.wsdl" MetadataType="Wsdl" ID="121a1905-a068-4e4f-83f2-576253db4ad1" SourceId="1" SourceUrl="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?wsdl" />
+    <MetadataFile FileName="Altus.wsdl" MetadataType="Wsdl" ID="d17498bf-24a0-433d-8e95-9b6ef6f639d5" SourceId="1" SourceUrl="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?wsdl=wsdl0" />
+    <MetadataFile FileName="Altus.xsd" MetadataType="Schema" ID="b423874a-e128-42be-8982-0bab02fbfa10" SourceId="1" SourceUrl="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?xsd=xsd1" />
+    <MetadataFile FileName="Altus1.xsd" MetadataType="Schema" ID="536289b5-1afc-470f-8217-94285381c33e" SourceId="1" SourceUrl="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?xsd=xsd0" />
+    <MetadataFile FileName="Altus2.xsd" MetadataType="Schema" ID="e7171eaa-ff14-46c8-8e43-988c1df8cda1" SourceId="1" SourceUrl="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

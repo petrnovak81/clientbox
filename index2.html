@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.3.914/styles/kendo.bootstrap-main.min.css" />
+    <script src="https://kendo.cdn.telerik.com/2021.3.914/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.3.914/js/kendo.all.min.js"></script>
+
+    <style>
+        html, body {
+        height:100%;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        }
+
+        .k-drawer-container, .h-100 {
+            height: 100%;
+        }
+
+        .border-0 {
+        border:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar"
+         data-role="toolbar"
+         data-items='[
+   		        {"type": "button", "icon": "menu", attributes: { "class": "k-flat" }}
+   	        ]'
+         data-bind="events: { click: toggleDrawer }">
+    </div>
+    <div id="drawer"
+         data-role="drawer"
+         data-width="250"
+         data-auto-collapse="false"
+         data-mode="push"
+         data-template="<ul data-bind='source:items' data-template='daraver-items'></ul>">
+        <iframe src="http://www.lorem-ipsum.cz/" class="h-100 border-0"></iframe>
+    </div>
+    <script id="daraver-items" type="text/html">
+        <li data-role='drawer-item'><span class='k-item-text'>${text}</span></li>
+    </script>
+    <script>
+        var drawerInstance = null;
+        var viewModel = kendo.observable({
+            items: [
+                { text: "TEST" }
+            ],
+            toggleDrawer: function () {
+                var drawerContainer = drawerInstance.drawerContainer;
+                if (drawerContainer.hasClass("k-drawer-expanded")) {
+                    drawerInstance.hide();
+                } else {
+                    drawerInstance.show();
+                }
+            }
+        });
+        kendo.bind($("body"), viewModel);
+        drawerInstance = $("#drawer").data().kendoDrawer;
+        drawerInstance.show();
+    </script>
+</body>
+</html>

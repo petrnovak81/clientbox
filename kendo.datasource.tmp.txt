@@ -1,0 +1,63 @@
+#gridcolumns#
+
+ agilo.#procedure# = new kendo.data.DataSource({
+        serverSorting: true,
+        serverFiltering: true,
+        serverPaging: true,
+        //pageSize: 100,
+        //filter: (idobjektu ? { field: "IDOrder", operator: "eq", value: IDOrder } : {}),
+        //sort: { field: "IDOrder", dir: "desc" },
+        schema: {
+            data: "data",
+            total: "total",
+            errors: "error",
+            model: {
+                id: "#id#",
+                fields: {
+                    #columns#
+                }
+            }
+        },
+        transport: {
+            read: {
+                url: function (options) {
+                    return '/Api/Service/#procedure#?type=read';
+                },
+                type: "GET"
+            },
+            update: {
+                url: function (data) {
+                    return '/Api/Service/#procedure#?type=update';
+                },
+                type: "POST"
+            },
+            create: {
+                url: function (data) {
+                    return '/Api/Service/#procedure#?type=create';
+                },
+                type: "POST"
+            },
+            destroy: {
+                url: function (data) {
+                    return '/Api/Service/#procedure#?type=remove';
+                },
+                type: "POST"
+            },
+            parameterMap: function (data, type) {
+                if (type === "read") {
+                    var pm = kendo.data.transports.odata.parameterMap(data);
+                    return pm;
+                } else {
+                    return data;
+                }
+            }
+        },
+        error: function (e) {
+            e.sender.cancelChanges();
+            if (e.errors) {
+                agiloAlert("Hlášení", e.errors);
+            } else {
+                agiloAlert("Error " + e.xhr.status, "Systémová chyba aplikace. Kontaktujte vývojáře.");
+            }
+        }
+    });

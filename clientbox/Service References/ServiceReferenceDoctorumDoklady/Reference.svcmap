@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d3fffdf-25d9-490e-8b48-cde48e156799" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Doklady.wsdl" MetadataType="Wsdl" ID="eedeb226-8135-4027-a53c-05cffaf1a83d" SourceId="1" SourceUrl="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?wsdl" />
+    <MetadataFile FileName="Altus.xsd" MetadataType="Schema" ID="8575152d-ac5f-4b54-a95d-dae503e660a8" SourceId="1" SourceUrl="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?xsd=xsd1" />
+    <MetadataFile FileName="Altus1.xsd" MetadataType="Schema" ID="99d4b042-3985-4dee-9012-ec7f63fe443d" SourceId="1" SourceUrl="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?xsd=xsd2" />
+    <MetadataFile FileName="Altus2.xsd" MetadataType="Schema" ID="6c92790a-53f0-4384-9198-b1a97f3a824e" SourceId="1" SourceUrl="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?xsd=xsd0" />
+    <MetadataFile FileName="Altus.wsdl" MetadataType="Wsdl" ID="0330995b-9b6a-4e1d-8216-fcb49ebdb08e" SourceId="1" SourceUrl="http://192.168.10.98:64999/DOCTORUM.CZ/Altus.COM.V12.BasicServices.Doklady?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

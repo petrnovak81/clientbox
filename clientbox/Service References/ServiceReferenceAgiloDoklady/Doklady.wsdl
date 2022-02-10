@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.altus.cz/Altus.COM.V12.BasicContracts/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Doklady" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IDoklady_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.altus.cz/Altus.COM.V12.BasicContracts/" location="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="WSHttpBinding_IDoklady" type="i0:IDoklady">
+    <wsp:PolicyReference URI="#WSHttpBinding_IDoklady_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VlozitNovyDoklad">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VlozitNovyDoklad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDoklad">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDoklad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladRG">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladRGPolozka">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGPolozka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AktualizovatDoklad">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/AktualizovatDoklad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DodatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/DodatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObjednatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ObjednatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PotvrditPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PotvrditPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RezervovatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/RezervovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OdrezervovatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/OdrezervovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VydatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VydatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FakturovatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/FakturovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StornovatPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PrijmoutPolozkuDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PrijmoutPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ZaokrouhlitCastku">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ZaokrouhlitCastku" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladyPodleSloupce">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyPodleSloupce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistCislaDokladuPodleSloupce">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuPodleSloupce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NastavitKonceptPolozkyDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitKonceptPolozkyDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UplatnitZalohy">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UplatnitZalohyRG">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyRG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NastavitZamekDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NastavitZamekDokladuRG">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuRG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDoklady">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDoklady" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistCislaDokladu">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StornovatDoklad">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDoklad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StornovatDokladRG">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladRG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ParovatZZaZV">
+      <soap12:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ParovatZZaZV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap12:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDoklady" type="i0:IDoklady">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VlozitNovyDoklad">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VlozitNovyDoklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDoklad">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDoklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladRG">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladRGPolozka">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladRGPolozka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AktualizovatDoklad">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/AktualizovatDoklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DodatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/DodatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObjednatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ObjednatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PotvrditPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PotvrditPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RezervovatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/RezervovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OdrezervovatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/OdrezervovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VydatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/VydatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FakturovatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/FakturovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StornovatPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PrijmoutPolozkuDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/PrijmoutPolozkuDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ZaokrouhlitCastku">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ZaokrouhlitCastku" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDokladyPodleSloupce">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDokladyPodleSloupce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistCislaDokladuPodleSloupce">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladuPodleSloupce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NastavitKonceptPolozkyDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitKonceptPolozkyDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UplatnitZalohy">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UplatnitZalohyRG">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/UplatnitZalohyRG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NastavitZamekDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NastavitZamekDokladuRG">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NastavitZamekDokladuRG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistDoklady">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistDoklady" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NacistCislaDokladu">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/NacistCislaDokladu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StornovatDoklad">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDoklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StornovatDokladRG">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/StornovatDokladRG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ParovatZZaZV">
+      <soap:operation soapAction="http://www.altus.cz/Altus.COM.V12.BasicContracts/IDoklady/ParovatZZaZV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionContractFault">
+        <soap:fault use="literal" name="ExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Doklady">
+    <wsdl:port name="WSHttpBinding_IDoklady" binding="tns:WSHttpBinding_IDoklady">
+      <soap12:address location="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDoklady" binding="tns:BasicHttpBinding_IDoklady">
+      <soap:address location="http://192.168.10.98:64990/AGILO/Altus.COM.V12.BasicServices.Doklady/basic" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
